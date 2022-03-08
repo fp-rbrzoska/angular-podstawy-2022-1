@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
+  showBox = false;
+
+  myNumbers = [1,2,3,4,5];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleBox() {
+    this.showBox = !this.showBox
   }
 
 }

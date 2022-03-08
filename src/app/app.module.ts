@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ContactComponent,
     NavigationComponent,
     PageNotFoundComponent
+
   ],
   imports: [
     BrowserModule,

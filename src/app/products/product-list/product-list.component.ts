@@ -8,30 +8,30 @@ import { User } from 'src/app/models/User';
 })
 export class ProductListComponent implements OnInit {
 
-  showBox = true;
+  // showBox = true;
 
-  myNumbers = [1,2,3,4,5];
-  users: User[] = [
-    { name: 'Alojzy', age: 65, isOnline: false },
-    { name: 'Helga', age: 40, isOnline: true },
-    { name: 'Johnny', age: 18, isOnline: true },
-    { name: 'Jarek', age: 70, isOnline: false }
-  ];
+  // myNumbers = [1,2,3,4,5];
+  // users: User[] = [
+  //   { name: 'Alojzy', age: 65, isOnline: false },
+  //   { name: 'Helga', age: 40, isOnline: true },
+  //   { name: 'Johnny', age: 18, isOnline: true },
+  //   { name: 'Jarek', age: 70, isOnline: false }
+  // ];
 
-  myDate = new Date();
+  // myDate = new Date();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleBox() {
-    this.showBox = !this.showBox
-  }
+  // toggleBox() {
+  //   this.showBox = !this.showBox
+  // }
 
-  makeUppercase(str: string) {
-    console.log('uppercase!')
-    return str.toUpperCase()
-  }
+  // makeUppercase(str: string) {
+  //   console.log('uppercase!')
+  //   return str.toUpperCase()
+  // }
 
 }

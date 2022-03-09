@@ -1,10 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/Product';
 
 @Component({
   selector: 'fp-product-item',
   templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.scss']
+  styleUrls: ['./product-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductItemComponent implements OnInit {
 

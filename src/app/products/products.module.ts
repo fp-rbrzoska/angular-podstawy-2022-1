@@ -8,6 +8,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProductsService } from './products.service';
 
 export const appproductsfactory = () => { }
 
@@ -23,6 +24,7 @@ export const appproductsfactory = () => { }
     CommonModule,
     ProductsRoutingModule,
     SharedModule
-  ]
+  ],
+  providers: [ProductsService]
 })
 export class ProductsModule { }

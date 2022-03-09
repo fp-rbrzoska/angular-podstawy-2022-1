@@ -7,6 +7,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SharedModule } from '../shared/shared.module';
 
 export const appproductsfactory = () => { }
 
@@ -20,7 +21,8 @@ export const appproductsfactory = () => { }
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    SharedModule
   ]
 })
 export class ProductsModule { }

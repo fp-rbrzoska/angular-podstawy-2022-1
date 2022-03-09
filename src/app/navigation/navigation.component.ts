@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { AuthService } from '../core/auth.service';
 
 @Component({
@@ -10,18 +10,21 @@ import { AuthService } from '../core/auth.service';
 export class NavigationComponent implements OnInit, OnDestroy {
 
   isLoggedIn!: boolean;
-  subscription!: Subscription;
-  constructor(private _authService: AuthService) { }
+  isLoggedIn$: Observable<boolean>
+  // subscription!: Subscription;
+  constructor(private _authService: AuthService) {
+    this.isLoggedIn$ = _authService.isLoggedIn$;
+  }
 
   ngOnInit(): void {
-    this.subscription = this._authService.isLoggedIn$.subscribe(v => this.isLoggedIn = v)
+    // this.subscription = this._authService.isLoggedIn$.subscribe(v => this.isLoggedIn = v)
   }
   logIn() {
     this._authService.logIn();
   }
 
   ngOnDestroy(): void {
-      this.subscription.unsubscribe()
+     // this.subscription.unsubscribe()
   }
 
 }

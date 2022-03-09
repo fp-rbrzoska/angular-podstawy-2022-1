@@ -11,5 +11,8 @@
   </li>
 
 </ul>
-<div>{{isLoggedIn}}</div>
+
+<ng-container *ngIf="isLoggedIn$ | async as isLogged">
+<div>{{ isLogged }}</div>
+</ng-container>
 <button (click)="logIn()">LogIn</button>

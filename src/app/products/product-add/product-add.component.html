@@ -1,1 +1,14 @@
-<p>product-add works!</p>
+<form [formGroup]="myFormGroup">
+ <div>
+  Name: <input formControlName="name">
+  <div *ngIf="myFormGroup.get('name')?.errors">{{myFormGroup.get('name')?.errors | json}} </div>
+ </div>
+ <div>
+
+  Description: <input formControlName="description">
+  <div *ngIf="myFormGroup.get('description')?.errors">{{myFormGroup.get('description')?.errors | json}} </div>
+ </div>
+  Price: <input formControlName="price">
+  <button type="button" (click)="save()">Save</button>
+</form>
+{{myFormGroup.getRawValue() | json}}

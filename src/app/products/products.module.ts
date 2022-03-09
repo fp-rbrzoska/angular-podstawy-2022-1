@@ -9,6 +9,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsService } from './products.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export const appproductsfactory = () => { }
 
@@ -23,7 +24,8 @@ export const appproductsfactory = () => { }
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [ProductsService]
 })

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/models/Product';
 import { User } from 'src/app/models/User';
 import { ProductsService } from '../products.service';
@@ -11,7 +12,7 @@ import { ProductsService } from '../products.service';
 export class ProductListComponent implements OnInit {
 
   // showBox = true;
-
+  products$!: Observable<Product[]>
   // myNumbers = [1,2,3,4,5];
   // users: User[] = [
   //   { name: 'Alojzy', age: 65, isOnline: false },
@@ -28,7 +29,10 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.products = this._productsService.products;
+    //this.products = this._productsService.products;
+    this.products$ = this._productsService.products$;
+    this._productsService.fetchProducts();
+
   }
 
   // toggleBox() {

@@ -1,1 +1,3 @@
-<p>product-item works!</p>
+<div>
+  {{product.name }} <span [ngClass]="{ red: product.price < 1 }">{{product.price | currency: 'USD'}}</span>
+</div>

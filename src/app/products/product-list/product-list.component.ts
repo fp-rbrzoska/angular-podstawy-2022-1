@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/Product';
 import { User } from 'src/app/models/User';
 
 @Component({
@@ -20,6 +21,11 @@ export class ProductListComponent implements OnInit {
 
   // myDate = new Date();
 
+  products: Product[] = [
+    { id: '1', name: 'Prod1', description: 'Prod1 descr', price: 0.5 },
+    { id: '2', name: 'Super Prod2', description: 'Prod2 descr', price: 2 },
+    { id: '3', name: 'Exrtra Prod3', price: 10 },
+  ]
   constructor() { }
 
   ngOnInit(): void {

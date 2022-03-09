@@ -1,1 +1,6 @@
-<p>contact works!</p>
+
+<button (click)="addUser()">Add user</button>
+<ng-container *ngFor="let user of users">
+  <div [ngClass]="{ online: user.isOnline }" >{{ user.name | uppercase }} ({{ user.age | multiply:2 }})</div>
+  <hr>
+</ng-container>
